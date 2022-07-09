@@ -3,6 +3,7 @@ import './CalendarHome.css'
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 import './Calendar.css'
+import { BiPlusCircle } from 'react-icons/bi';
 import jan_image from '../../assets/Images/january_image.svg'
 import feb_image from '../../assets/Images/feburary_image.svg'
 import mar_image from '../../assets/Images/march_image.svg'
@@ -45,10 +46,10 @@ function CalendarHome() {
         //Setting home image
         const homeImages = [jan_image, feb_image, mar_image, apr_image, may_image, jun_image,
             jul_image, aug_image, sep_image, oct_image, nov_image, dec_image]
-          
-            // console.log(homeImages[2]);
-            console.log(d.getMonth());
-            setSelectedImage(homeImages[d.getMonth()]);
+
+        // console.log(homeImages[2]);
+        console.log(d.getMonth());
+        setSelectedImage(homeImages[d.getMonth()]);
 
     }
 
@@ -59,6 +60,57 @@ function CalendarHome() {
     return (
         <div className='calendar_container'>
             <div className="calendar_innercontainer">
+                <div className="addEvents_container">
+                    <div className="create_button">
+                        <button><BiPlusCircle size={25} />Create</button>
+                    </div>
+                    <div className="my_calenders">
+                        <div className='my_calenders_headers'>
+                            <p>Calendars</p>
+                        </div>
+                        <div className="my_calenders_checkbox_holder">
+
+                            <div>
+                                <input type="checkbox" name="your_calender" />
+                                <label >Your Calendar</label><br />
+                            </div>
+
+                            <div>
+                                <input type="checkbox" name="reminders" />
+                                <label >Reminders</label><br />
+                            </div>
+
+                            <div>
+                                <input type="checkbox" name="task" />
+                                <label >Tasks</label>
+                            </div>
+
+                        </div>
+
+                        <div className='my_calenders_headers'>
+                            <p>Other Calendars</p>
+                        </div>
+                        <div className="my_othercalenders_checkbox_holder">
+                            <div>
+                                <input type="checkbox" />
+                                <label >Your Calendar</label><br />
+                            </div>
+
+                            <div>
+                                <input type="checkbox" />
+                                <label >Reminders</label><br />
+                            </div>
+
+                            <div>
+                                <input type="checkbox" />
+                                <label >Tasks</label>
+                            </div>
+                        </div>
+                    </div>
+                    {/* <div className="other_calendars">
+
+                    </div> */}
+                </div>
                 <div className="calendar_innercontainer_sec1">
                     <div className="calender_sec1_one">
                         <div className="calendar_sec1_image_holder">
@@ -86,6 +138,7 @@ function CalendarHome() {
                         <p>There Are No Events Today</p>
                     </div>
                 </div>
+
             </div>
         </div>
     )

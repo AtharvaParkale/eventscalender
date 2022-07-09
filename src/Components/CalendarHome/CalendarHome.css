@@ -9,7 +9,7 @@
 
 .calendar_innercontainer {
     /* border: 2px solid black; */
-    width: 80%;
+    width: 100%;
     height: 90%;
     display: flex;
     align-items: center;
@@ -19,7 +19,7 @@
 
 .calendar_innercontainer_sec1 {
     /* border: 2px solid black; */
-    width: 60%;
+    width: 50%;
     height: 95%;
     display: flex;
     align-items: center;
@@ -60,7 +60,7 @@
     justify-content: space-evenly;
     flex-direction: column;
     /* border: 2px solid black; */
-    width: 30%;
+    width: 25%;
     height: 95%;
     background-color: #eee;
     border-radius: 10px;
@@ -137,4 +137,88 @@
     font-size: 17px;
     color: #9e9e9e!important;
     font-weight: 600;
+}
+.addEvents_container{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    /* border: 2px solid black; */
+    width: 19%;
+    height: 95%;
+    background-color: #eee;
+    border-radius: 10px;
+}
+.create_button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 15%;
+    /* border: 2px solid black; */
+    width: 90%;
+}
+.create_button button{
+    font-weight: 600;
+    font-size: 20px;
+    width: 10vw;
+    height: 7vh;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #2979ff;
+    color: white;
+    border: none;
+    
+}
+.my_calenders{
+    /* border: 2px solid black; */
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    flex-direction: column;
+    width: 100%;
+    height: 70%;
+}
+.my_calenders p{
+    font-weight: 700;
+    font-size: 18px;
+    width: 90%;
+    color: white;
+    
+}
+.my_calenders_headers{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #37474f9c;
+    width: 100%;
+    height: 4vh;
+    margin-bottom: 2vh;
+}
+.my_calenders_headers p{
+    /* border: 2px solid black; */
+}
+.my_calenders_checkbox_holder{
+    /* border: 2px solid black; */
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 20%;
+    margin-bottom: 6vh;
+    width: 95%;
+}
+.my_othercalenders_checkbox_holder{
+    /* border: 2px solid black; */
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 20%;
+    width: 95%;
+}
+.my_calenders label{
+    font-weight: 600;
+    color: #37474f;
 }
