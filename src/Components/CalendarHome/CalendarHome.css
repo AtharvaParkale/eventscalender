@@ -1,3 +1,24 @@
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+    border-radius: 50px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 50px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
 .calendar_container {
     /* border: 2px solid black; */
     width: 100%;
@@ -57,7 +78,7 @@
 .calendar_innercontainer_sec2 {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    /* justify-content: space-evenly; */
     flex-direction: column;
     /* border: 2px solid black; */
     width: 25%;
@@ -110,6 +131,31 @@
     /* border: 2px solid black; */
     width: 100%;
     height: 70%;
+}
+.show-events-container{
+    display: flex;
+    align-items: center;
+    /* border: 2px solid rgb(215, 0, 0); */
+    width: 100%;
+    height: 70%;
+    justify-content: center;
+}
+.show-events-inner{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 90%;
+    height: 90%;
+    /* border: 2px solid black; */
+    overflow-y: scroll;
+    color: #37474f;
+
+}
+.show-events-inner label{
+    font-weight: 600;
+}
+.show-events-inner p{
+    margin-top: 1vh;
 }
 .noEvents_header{
     color: #2979ff!important;
@@ -169,6 +215,7 @@
     background-color: #2979ff;
     color: white;
     border: none;
+    cursor: pointer;
     
 }
 .my_calenders{
@@ -183,7 +230,7 @@
 .my_calenders p{
     font-weight: 700;
     font-size: 18px;
-    width: 90%;
+    width: 80%;
     color: white;
     
 }
@@ -221,4 +268,13 @@
 .my_calenders label{
     font-weight: 600;
     color: #37474f;
+}
+.add_calenders p{
+    width: 80%;
+}
+.add_calenders{
+    color: white;
+}
+.add_calenders{
+    cursor: pointer;
 }
