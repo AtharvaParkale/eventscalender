@@ -14,7 +14,8 @@
 .popup-inner {
     position: relative;
     width: 40vw;
-    height: 93vh;
+    /* height: 93vh; */
+    height: fit-content;
     background-color: white;
     /* border: 2px solid black; */
     display: flex;
@@ -25,22 +26,25 @@
     /* padding-top: 5vh; */
 }
 
-.popup-divs{
+.popup-divs {
     display: flex;
     align-items: flex-start;
     justify-content: center;
     flex-direction: column;
     width: 90%;
 }
-.popup-divs{
+
+.popup-divs {
     font-size: 12px;
     font-weight: 600;
 }
-.popup-divs label{
+
+.popup-divs label {
     margin-bottom: 1vh;
     color: #000000ba;
 }
-.popup-divs input{
+
+.popup-divs input {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -50,9 +54,10 @@
     border: 2px solid #9e9e9e73;
     border-radius: 5px;
     color: #000000ba;
-    
+
 }
-.popup-divs textarea{
+
+.popup-divs textarea {
     width: 100%;
     height: 10vh;
     margin-bottom: 2vh;
@@ -60,24 +65,28 @@
     border-radius: 5px;
     color: #000000ba;
 }
+
 .popup-buttons {
-   flex-direction: row;
-   justify-content: space-evenly;
-   align-items: center;
-   
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+
 }
-.popup-calendar{
+
+.popup-calendar {
     /* border: 2px sol  id black; */
     margin-bottom: 2vh;
 }
-.popup-calendar select{
+
+.popup-calendar select {
     height: 4vh;
     width: 100%;
     border: 2px solid #9e9e9e73;
     border-radius: 5px;
     color: #000000ba;
 }
-.popup-buttons button{
+
+.popup-buttons button {
     width: 9vw;
     height: 5vh;
     background-color: #2979ff;
@@ -86,15 +95,56 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    margin-bottom: 3vh;
 }
-#form_close{
+
+#form_close {
     background-color: #eee;
     color: #000000ba;
     border: 2px solid #9e9e9e73;
 }
-.popup-title{
-    /* margin-top: vh; */
-}
-.popup-date{
+
+.popup-date {
     margin-top: 2vh;
+}
+
+.popup-calendar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    /* border: 2px solid black; */
+    width: 100%;
+    height: 40vh;
+    flex-direction: column;
+
+}
+
+.popup-calendar-input {
+    /* border: 2px solid black; */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.popup-calendar-input label {
+    margin-bottom: 2vh;
+    font-weight: 600;
+    color: #000000ba;
+}
+
+.popup-calendar-input input {
+    width: 20vw;
+    height: 4vh;
+    border: 2px solid #9e9e9e73;
+}
+.popup-calendar-container button{
+    cursor: pointer;
+    font-weight: 600;
+    background-color: #2979ff;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    width: 12vw;
+    height: 6vh;
+
 }

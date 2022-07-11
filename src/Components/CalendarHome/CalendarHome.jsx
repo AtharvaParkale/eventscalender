@@ -31,6 +31,7 @@ function CalendarHome() {
     const [selectedImage, setSelectedImage] = useState(jan_image);
 
     const [buttonPopUp, setButtonPopUp] = useState(false);
+    const [addCalendarButton, setAddCalendarButton] = useState(false);
 
     const [showEvents, setShowEvents] = useState(true);
 
@@ -46,7 +47,7 @@ function CalendarHome() {
 
     // const [datesToAddClassTo, setDatesToAddClassTo] = useState(["Tue Jul 12 2022 00:00:00 GMT+0530 (India Standard Time)"]);
 
- 
+
 
     const setClickedDate = (a, b, c, x, y) => {
         // console.log(selectedDate);
@@ -79,12 +80,12 @@ function CalendarHome() {
 
     useEffect(() => {
         setClickedDate(selectedDate, clickedWeekDay, clickedMonth, clickedDay, selectedImage);
-        setFormData(formTitle, formDescription, formStartDate, formEndDate, formTime, formLocation, formTags, formCalendar,datesToAddClassTo);
+        setFormData(formTitle, formDescription, formStartDate, formEndDate, formTime, formLocation, formTags, formCalendar, datesToAddClassTo);
 
     },
         [selectedDate, clickedWeekDay, clickedMonth, clickedDay, selectedImage,
             formTitle, formDescription, formStartDate, formEndDate, formTime, formLocation, formTags, formCalendar
-            ,datesToAddClassTo  
+            , datesToAddClassTo
         ])
 
 
@@ -120,7 +121,9 @@ function CalendarHome() {
                             </div>
                             <div className='add_calenders my_calenders_headers'>
                                 <p>Add Calendars</p>
-                                <FaPlus />
+                                <FaPlus onClick={() => {
+                                    setAddCalendarButton(true);
+                                }} />
                             </div>
                         </div>
                     </div>
@@ -138,18 +141,18 @@ function CalendarHome() {
                                 }}
 
                                 tileClassName={
-                                    ({ date, view })=>{
+                                    ({ date, view }) => {
                                         if (view === 'month') {
                                             if (datesToAddClassTo[0] === date.toString()) {
                                                 console.log("Match found!!!!!");
                                                 return 'highlight';
                                             }
-                                        
+
+                                        }
                                     }
                                 }
-                            }
 
-                                  
+
                             />
                         </div>
                     </div>
@@ -174,12 +177,12 @@ function CalendarHome() {
                                         <p>
                                             {formDescription}
                                         </p>
-                                        <p><label>Start Date : </label>{formStartDate}</p>
-                                        <p><label>End Date : </label>{formEndDate}</p>
+                                        {/* <p><label>Start Date : </label>{formStartDate}</p> */}
+                                        <p><label>Due Date : </label>{formEndDate}</p>
                                         <p><label>Time : </label>{formTime}</p>
-                                        <p><label>Location : </label>{formLocation}</p>
-                                        <p><label>Tags : </label>{formTags}</p>
-                                        <p><label>Calendar : </label>{formCalendar}</p>
+                                        {/* <p><label>Location : </label>{formLocation}</p> */}
+                                        {/* <p><label>Tags : </label>{formTags}</p> */}
+                                        {/* <p><label>Calendar : </label>{formCalendar}</p> */}
                                     </div>
                                 </div>
 
@@ -263,10 +266,21 @@ function CalendarHome() {
                     <button onClick={() => {
                         setShowEvents(false);
                         setButtonPopUp(false);
-
-
                     }}>
                         Submit
+                    </button>
+                </div>
+            </PopUp>
+            <PopUp trigger={addCalendarButton} setTrigger={setAddCalendarButton}>
+                <div className="popup-calendar-container">
+                    <div className="popup-calendar-input">
+                        <label >Enter Calendar Name</label>
+                        <input type="text" />
+                    </div>
+                    <button onClick={()=>{
+                        setAddCalendarButton(false);
+                    }}>
+                        Add Calendar
                     </button>
                 </div>
             </PopUp>

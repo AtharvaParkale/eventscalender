@@ -138,24 +138,40 @@
     /* border: 2px solid rgb(215, 0, 0); */
     width: 100%;
     height: 70%;
-    justify-content: center;
+    /* justify-content: center; */
+    flex-direction: column;
+    overflow-y: scroll;
 }
 .show-events-inner{
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     flex-direction: column;
     width: 90%;
-    height: 90%;
+    height: 25vh;
     /* border: 2px solid black; */
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
     color: #37474f;
+    cursor: pointer;
+    margin-top: 2vh;
+    border-radius:8px;
+    /* box-shadow: 2px 2px 2px black; */
+    box-shadow: 4px 4px 10px #000000c2;
 
+    
+
+}
+.show-events-inner h2{
+    margin-top: 1vh;
+    width: 90%;
+    /* border: 2px solid black; */
+    margin-bottom: 2vh;
 }
 .show-events-inner label{
     font-weight: 600;
 }
 .show-events-inner p{
     margin-top: 1vh;
+    width: 90%;
 }
 .noEvents_header{
     color: #2979ff!important;
@@ -243,9 +259,7 @@
     height: 4vh;
     margin-bottom: 2vh;
 }
-.my_calenders_headers p{
-    /* border: 2px solid black; */
-}
+
 .my_calenders_checkbox_holder{
     /* border: 2px solid black; */
     display: flex;
