@@ -2,23 +2,24 @@
 ::-webkit-scrollbar {
     width: 5px;
     border-radius: 50px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
+}
+
+/* Track */
+::-webkit-scrollbar-track {
     background: #f1f1f1;
-  }
-  
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
     background: #888;
     border-radius: 50px;
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
     background: #555;
-  }
+}
+
 .calendar_container {
     /* border: 2px solid black; */
     width: 100%;
@@ -57,6 +58,7 @@
     justify-content: center;
 
 }
+
 .calendar_sec1_image_holder {
     display: flex;
     align-items: center;
@@ -65,16 +67,19 @@
     width: 60%;
     height: 100%;
 }
+
 .calendar_sec1_image_holder img {
     width: 100%;
     height: 100%;
     object-fit: contain;
 }
+
 .calender_sec1_two {
     /* border: 2px solid black; */
     width: 100%;
     height: 50%;
 }
+
 .calendar_innercontainer_sec2 {
     display: flex;
     align-items: center;
@@ -132,7 +137,8 @@
     width: 100%;
     height: 70%;
 }
-.show-events-container{
+
+.show-events-container {
     display: flex;
     align-items: center;
     /* border: 2px solid rgb(215, 0, 0); */
@@ -142,44 +148,53 @@
     flex-direction: column;
     overflow-y: scroll;
 }
-.show-events-inner{
+
+.show-events-inner {
     display: flex;
     align-items: center;
     flex-direction: column;
     width: 90%;
-    height: 25vh;
+    /* min-height: 25vh; */
+    height: auto;
     /* border: 2px solid black; */
     /* overflow-y: scroll; */
     color: #37474f;
     cursor: pointer;
     margin-top: 2vh;
-    border-radius:8px;
+    border-radius: 8px;
     /* box-shadow: 2px 2px 2px black; */
     box-shadow: 4px 4px 10px #000000c2;
+    margin-bottom: 2vh;
 
-    
+
 
 }
-.show-events-inner h2{
+
+.show-events-inner h2 {
     margin-top: 1vh;
     width: 90%;
     /* border: 2px solid black; */
+    overflow-wrap: break-word;
     margin-bottom: 2vh;
 }
-.show-events-inner label{
+
+.show-events-inner label {
     font-weight: 600;
 }
-.show-events-inner p{
+
+.show-events-inner p {
+    overflow-wrap: break-word;
     margin-top: 1vh;
     width: 90%;
 }
-.noEvents_header{
-    color: #2979ff!important;
+
+.noEvents_header {
+    color: #2979ff !important;
     font-size: 25px;
     margin-bottom: 1vh;
 }
 
-.no_image_image_holder{
+.no_image_image_holder {
     /* border: 2px solid black; */
     width: 60%;
     height: 50%;
@@ -188,19 +203,22 @@
     justify-content: center;
     margin-top: 2vh;
 }
-.no_image_image_holder img{
-   width: 100%;
-   height: 100%;
-   object-fit: contain;
+
+.no_image_image_holder img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
-.calender_sec2_two p{
+
+.calender_sec2_two p {
     text-align: center;
     margin-top: 0;
     font-size: 17px;
-    color: #9e9e9e!important;
+    color: #9e9e9e !important;
     font-weight: 600;
 }
-.addEvents_container{
+
+.addEvents_container {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -211,7 +229,8 @@
     background-color: #eee;
     border-radius: 10px;
 }
-.create_button{
+
+.create_button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -219,7 +238,8 @@
     /* border: 2px solid black; */
     width: 90%;
 }
-.create_button button{
+
+.create_button button {
     font-weight: 600;
     font-size: 20px;
     width: 10vw;
@@ -232,9 +252,10 @@
     color: white;
     border: none;
     cursor: pointer;
-    
+
 }
-.my_calenders{
+
+.my_calenders {
     /* border: 2px solid black; */
     display: flex;
     align-items: center;
@@ -243,14 +264,16 @@
     width: 100%;
     height: 70%;
 }
-.my_calenders p{
+
+.my_calenders p {
     font-weight: 700;
     font-size: 18px;
     width: 80%;
     color: white;
-    
+
 }
-.my_calenders_headers{
+
+.my_calenders_headers {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -260,7 +283,7 @@
     margin-bottom: 2vh;
 }
 
-.my_calenders_checkbox_holder{
+.my_calenders_checkbox_holder {
     /* border: 2px solid black; */
     display: flex;
     align-items: flex-start;
@@ -270,7 +293,8 @@
     margin-bottom: 6vh;
     width: 95%;
 }
-.my_othercalenders_checkbox_holder{
+
+.my_othercalenders_checkbox_holder {
     /* border: 2px solid black; */
     display: flex;
     align-items: flex-start;
@@ -279,16 +303,92 @@
     height: 20%;
     width: 95%;
 }
-.my_calenders label{
+
+.my_calenders label {
     font-weight: 600;
     color: #37474f;
 }
-.add_calenders p{
+
+.add_calenders p {
     width: 80%;
 }
-.add_calenders{
+
+.add_calenders {
     color: white;
 }
-.add_calenders{
+
+.add_calenders {
     cursor: pointer;
+}
+
+
+
+.selected-event-title {
+    /* border: 2px solid black; */
+    width: 70%;
+    color: #37474f;
+    overflow-wrap: break-word;
+
+}
+
+.selected-event-description {
+    /* border: 2px solid black; */
+    width: 70%;
+    line-height: 1.5;
+    font-weight: 500;
+    color: #0000008c;
+    overflow-wrap: break-word;
+}
+
+.selected-event-otherinfo {
+    /* border: 2px solid black; */
+    width: 70%;
+    font-weight: 500;
+    color: #0000008c;
+}
+
+.selected-event-otherinfo span {
+    color: #37474f;
+    font-weight: 600;
+}
+
+.selected-event-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 70%;
+    /* border: 2px solid black; */
+    margin-top: 4vh;
+    margin-bottom: 3vh;
+}
+
+.selected-event-buttons button {
+    width: 5.5vw;
+    height: 5vh;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#selected-event-close-btn {
+    background-color: #eee;
+    color: #000000ba;
+    border: 2px solid #9e9e9e73;
+    font-weight: 600;
+    /* margin-right: 3vh; */
+}
+
+#selected-event-delete-btn {
+    border: none;
+    background-color: red;
+    font-weight: 600;
+    color: white;
+}
+
+#selected-event-edit-btn {
+    background-color: #2979ff;
+    color: white;
+    font-weight: 600;
+    border: none;
+    /* margin-right: 3vh; */
 }
